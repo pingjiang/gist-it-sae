@@ -1,0 +1,21 @@
+name: gistit
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+worker: tornado
+
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
+handlers:
+- url: /assets/
+  static_path: assets
+  
+libraries:
+- name: tornado
+  version: "3.1.1"
